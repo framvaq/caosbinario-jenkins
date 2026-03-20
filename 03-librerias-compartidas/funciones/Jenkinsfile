@@ -1,6 +1,8 @@
 @Library('jenkinsLibs') _
 pipeline {
-    agent 'docker-node'
+    agent {
+        label 'docker-node'
+    }
 
     stages {
         stage('docker build') {
