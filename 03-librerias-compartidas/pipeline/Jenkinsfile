@@ -1,4 +1,4 @@
-@Library('jenkinsLibs') _
+@Library('jenkinsLibs@test') _
 dockerPipeline(
     dockerfilePath: "02-primer-pipeline/Dockerfile",
     dockerImage: "framirezv/homer_page:1.0.0-${BUILD_ID}",
