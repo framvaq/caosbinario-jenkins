@@ -9,7 +9,7 @@ pipeline {
             steps {
                 script {
                     dockerLib.build(DockerfilePath: "02-primer-pipeline/Dockerfile",
-                                    DockerImage: "caosbinario/homer_page:1.0.0-${env.BUILD_ID}",
+                                    DockerImage: "framvaq/homer_page:1.0.0-${env.BUILD_ID}",
                                     DockerContext: "02-primer-pipeline")
                 }
             }
@@ -17,7 +17,7 @@ pipeline {
         stage('docker push') {
             steps {
                 script {
-                    dockerLib.push(DockerImage: "caosbinario/homer_page:1.0.0-${env.BUILD_ID}")
+                    dockerLib.push(DockerImage: "framvaq/homer_page:1.0.0-${env.BUILD_ID}")
                 }
             }
         }
